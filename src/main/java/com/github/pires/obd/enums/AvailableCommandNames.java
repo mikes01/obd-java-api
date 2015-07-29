@@ -64,7 +64,9 @@ public enum AvailableCommandNames {
     ABS_LOAD("Absolute load"),
     ENGINE_OIL_TEMP("Engine oil temperature"),
     FUEL_AIR_COMMANDED("Air/Fuel Ratio"),
-    FUEL_AIR_WIDE_COMMANDED("Air/Fuel Wide Ratio");
+    FUEL_AIR_WIDE_COMMANDED("Air/Fuel Wide Ratio"),
+    O2_SENSOR_EQUIVALENCE("O2 Sensor Heater Circuit Malfunction Equivalence"),
+    O2_SENSOR_AMPERAGE("O2 Sensor Heater Circuit Malfunction Amperage");
 
     private final String value;
 
