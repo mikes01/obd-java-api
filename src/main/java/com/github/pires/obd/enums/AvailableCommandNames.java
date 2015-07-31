@@ -90,8 +90,6 @@ public enum AvailableCommandNames {
     FUEL_AIR_WIDE_COMMANDED_S6("Air/Fuel Wide Ratio sensor 6"),
     FUEL_AIR_WIDE_COMMANDED_S7("Air/Fuel Wide Ratio sensor 7"),
     FUEL_AIR_WIDE_COMMANDED_S8("Air/Fuel Wide Ratio sensor 8"),
-    O2_SENSOR_EQUIVALENCE("O2 Sensor Heater Circuit Malfunction Equivalence"),
-    O2_SENSOR_AMPERAGE("O2 Sensor Heater Circuit Malfunction Amperage"),
     DRIVERS_DEMAND_ENGINE("Drivers Demand Engine - Percent Torque"),
     ACTUAL_ENGINE("Actual engine - percent torque"),
     ENGINE_REFERENCE_TORQUE("Engine reference torque"),
