@@ -91,6 +91,11 @@ public enum AvailableCommandNames {
     ENGINE_PERCENT_TORQUE_DATA("Engine percent torque data"),
     AUX_IO("Auxiliary input / output supported"),
     MAF_SENSOR("Mass air flow sensor"),
+    LONG_TERM_SECONDARY_OXYGEN_B2_B4("Long Term Secondary Oxygen Bank 2 And Bank 4"),
+    SHORT_TERM_SECONDARY_OXYGEN_B2_B4("Short Term Secondary Oxygen Bank 2 And Bank 4"),
+    LONG_TERM_SECONDARY_OXYGEN_B1_B3("Long Term Secondary Oxygen Bank 1 And Bank 3"),
+    SHORT_TERM_SECONDARY_OXYGEN_B1_B3("Short Term Secondary Oxygen Bank 1 And Bank 3"),
+
     ENGINE_COOLANT_TEMPERATURE("Engine coolant temperature");
 
     private final String value;
