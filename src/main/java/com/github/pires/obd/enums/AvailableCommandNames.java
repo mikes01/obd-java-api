@@ -80,7 +80,14 @@ public enum AvailableCommandNames {
     FUEL_AIR_COMMANDED("Air/Fuel Ratio"),
     FUEL_AIR_WIDE_COMMANDED("Air/Fuel Wide Ratio"),
     O2_SENSOR_EQUIVALENCE("O2 Sensor Heater Circuit Malfunction Equivalence"),
-    O2_SENSOR_AMPERAGE("O2 Sensor Heater Circuit Malfunction Amperage");
+    O2_SENSOR_AMPERAGE("O2 Sensor Heater Circuit Malfunction Amperage"),
+    DRIVERS_DEMAND_ENGINE("Drivers Demand Engine - Percent Torque"),
+    ACTUAL_ENGINE("Actual engine - percent torque"),
+    ENGINE_REFERENCE_TORQUE("Engine reference torque"),
+    ENGINE_PERCENT_TORQUE_DATA("Engine percent torque data"),
+    AUX_IO("Auxiliary input / output supported"),
+    MAF_SENSOR("Mass air flow sensor"),
+    ENGINE_COOLANT_TEMPERATURE("Engine coolant temperature");
 
     private final String value;
 
