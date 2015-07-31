@@ -30,6 +30,10 @@ package com.github.pires.obd.enums;
 public enum AvailableCommandNames {
 
     AIR_INTAKE_TEMP("Air Intake Temperature"),
+    CATALYST_TEMPERATURE_B1_S1("Catalyst Temperature Bank 1 Sensor 1"),
+    CATALYST_TEMPERATURE_B1_S2("Catalyst Temperature Bank 1 Sensor 2"),
+    CATALYST_TEMPERATURE_B2_S1("Catalyst Temperature Bank 2 Sensor 1"),
+    CATALYST_TEMPERATURE_B2_S2("Catalyst Temperature Bank 2 Sensor 2"),
     AMBIENT_AIR_TEMP("Ambient Air Temperature"),
     ENGINE_COOLANT_TEMP("Engine Coolant Temperature"),
     BAROMETRIC_PRESSURE("Barometric Pressure"),
