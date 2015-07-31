@@ -95,7 +95,9 @@ public enum AvailableCommandNames {
     SHORT_TERM_SECONDARY_OXYGEN_B2_B4("Short Term Secondary Oxygen Bank 2 And Bank 4"),
     LONG_TERM_SECONDARY_OXYGEN_B1_B3("Long Term Secondary Oxygen Bank 1 And Bank 3"),
     SHORT_TERM_SECONDARY_OXYGEN_B1_B3("Short Term Secondary Oxygen Bank 1 And Bank 3"),
-
+    ABSOLUTE_EVAP("Absolute Evap system Vapor Pressure"),
+    EVAP("Evap system vapor pressure"),
+    FUEL_RAIL_ABSOLUTE("Fuel rail pressure (absolute)"),
     ENGINE_COOLANT_TEMPERATURE("Engine coolant temperature");
 
     private final String value;
