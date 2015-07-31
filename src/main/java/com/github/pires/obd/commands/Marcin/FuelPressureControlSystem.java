@@ -4,13 +4,13 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
 
 /**
- * Created by Marcin on 2015-07-29.
+ * Created by Marcin on 31.07.2015.
  */
-public class IntakeAirTemperatureSensor extends ObdCommand {
+public class FuelPressureControlSystem extends ObdCommand {
     private float afr = 0;
 
-    public IntakeAirTemperatureSensor() {
-        super("01 68");
+    public FuelPressureControlSystem() {
+        super("01 6D");
     }
 
     @Override
@@ -22,8 +22,8 @@ public class IntakeAirTemperatureSensor extends ObdCommand {
         float D = buffer.get(5);
         float E = buffer.get(6);
         float F = buffer.get(7);
-        float G = buffer.get(8);
-        afr = A + B + C + D + E + F + G;
+
+        afr = A + B + C + D + E + F;
     }
 
     @Override
@@ -42,7 +42,7 @@ public class IntakeAirTemperatureSensor extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.INTAKE_AIR_TEMP_SENSOR.getValue();
+        return AvailableCommandNames.FUEL_PRESSURE_CONTROL.getValue();
     }
 
 }

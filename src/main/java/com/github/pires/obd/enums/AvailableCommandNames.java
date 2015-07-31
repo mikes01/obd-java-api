@@ -98,7 +98,15 @@ public enum AvailableCommandNames {
     ABSOLUTE_EVAP("Absolute Evap system Vapor Pressure"),
     EVAP("Evap system vapor pressure"),
     FUEL_RAIL_ABSOLUTE("Fuel rail pressure (absolute)"),
-    ENGINE_COOLANT_TEMPERATURE("Engine coolant temperature");
+    ENGINE_COOLANT_TEMPERATURE("Engine coolant temperature"),
+    INTAKE_AIR_TEMP_SENSOR("Intake air temperature sensor"),
+    COMMANDED_EGR("Commanded EGR and EGR Error"),
+    COMMANDED_DIESEL_INTAKE_AIR_FLOW("Commanded Diesel intake air flow control and relative intake air flow position"),
+    EXHAUST_GAS_RECIRCULATION_TEMP("Exhaust gas recirculation temperature"),
+    COMMANDED_THROTTLE_ACTUATOR("Commanded throttle actuator control and relative throttle position"),
+    FUEL_PRESSURE_CONTROL("Fuel pressure control system"),
+    INJECTION_PRESSURE_CONTROL("Injection pressure control system"),
+    TURBOCHARGER_COMPRESSOR_INLET("Turbocharger compressor inlet pressure");
 
     private final String value;
 

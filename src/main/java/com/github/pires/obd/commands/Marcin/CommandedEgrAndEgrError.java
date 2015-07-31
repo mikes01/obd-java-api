@@ -4,13 +4,13 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
 
 /**
- * Created by Marcin on 2015-07-29.
+ * Created by Marcin on 31.07.2015.
  */
-public class IntakeAirTemperatureSensor extends ObdCommand {
+public class CommandedEgrAndEgrError extends ObdCommand {
     private float afr = 0;
 
-    public IntakeAirTemperatureSensor() {
-        super("01 68");
+    public CommandedEgrAndEgrError() {
+        super("01 69");
     }
 
     @Override
@@ -42,7 +42,7 @@ public class IntakeAirTemperatureSensor extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.INTAKE_AIR_TEMP_SENSOR.getValue();
+        return AvailableCommandNames.COMMANDED_EGR.getValue();
     }
 
 }

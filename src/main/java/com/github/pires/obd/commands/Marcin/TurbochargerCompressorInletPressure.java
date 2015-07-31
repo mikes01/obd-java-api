@@ -1,30 +1,31 @@
 package com.github.pires.obd.commands.Marcin;
 
-import com.github.pires.obd.commands.ObdCommand;
 import com.github.pires.obd.enums.AvailableCommandNames;
+import com.github.pires.obd.commands.ObdCommand;
 
 /**
- * Created by Marcin on 2015-07-29.
+ * Created by Marcin on 31.07.2015.
  */
-
-public class ActualEnginePercentTorque extends ObdCommand {
-
+public class TurbochargerCompressorInletPressure extends ObdCommand {
     private float afr = 0;
 
-    public ActualEAnginePercentTorque() {
-        super("01 62");
+    public TurbochargerCompressorInletPressure() {
+        super("01 6F");
     }
 
     @Override
     protected void performCalculations() {
-        // ignore first two bytes [01 62] of the response
+        // ignore first two bytes [01 63] of the response
         float A = buffer.get(2);
-        afr = A - 125;
+        float B = buffer.get(3);
+        float C = buffer.get(4);
+
+        afr = A + B + C;
     }
 
     @Override
     public String getFormattedResult() {
-        return String.format("%.2f", getAfr() + "%");
+        return String.format("%.2f", getAfr());
     }
 
     @Override
@@ -38,8 +39,7 @@ public class ActualEnginePercentTorque extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.ACTUAL_ENGINE.getValue();
+        return AvailableCommandNames.TURBOCHARGER_COMPRESSOR_INLET.getValue();
     }
 
 }
-
