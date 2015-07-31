@@ -83,6 +83,13 @@ public enum AvailableCommandNames {
     ENGINE_OIL_TEMP("Engine oil temperature"),
     FUEL_AIR_COMMANDED("Air/Fuel Ratio"),
     FUEL_AIR_WIDE_COMMANDED("Air/Fuel Wide Ratio"),
+    FUEL_AIR_WIDE_COMMANDED_S2("Air/Fuel Wide Ratio sensor 2"),
+    FUEL_AIR_WIDE_COMMANDED_S3("Air/Fuel Wide Ratio sensor 3"),
+    FUEL_AIR_WIDE_COMMANDED_S4("Air/Fuel Wide Ratio sensor 4"),
+    FUEL_AIR_WIDE_COMMANDED_S5("Air/Fuel Wide Ratio sensor 5"),
+    FUEL_AIR_WIDE_COMMANDED_S6("Air/Fuel Wide Ratio sensor 6"),
+    FUEL_AIR_WIDE_COMMANDED_S7("Air/Fuel Wide Ratio sensor 7"),
+    FUEL_AIR_WIDE_COMMANDED_S8("Air/Fuel Wide Ratio sensor 8"),
     O2_SENSOR_EQUIVALENCE("O2 Sensor Heater Circuit Malfunction Equivalence"),
     O2_SENSOR_AMPERAGE("O2 Sensor Heater Circuit Malfunction Amperage"),
     DRIVERS_DEMAND_ENGINE("Drivers Demand Engine - Percent Torque"),
@@ -98,7 +105,6 @@ public enum AvailableCommandNames {
     ABSOLUTE_EVAP("Absolute Evap system Vapor Pressure"),
     EVAP("Evap system vapor pressure"),
     FUEL_RAIL_ABSOLUTE("Fuel rail pressure (absolute)"),
-    ENGINE_COOLANT_TEMPERATURE("Engine coolant temperature"),
     INTAKE_AIR_TEMP_SENSOR("Intake air temperature sensor"),
     COMMANDED_EGR("Commanded EGR and EGR Error"),
     COMMANDED_DIESEL_INTAKE_AIR_FLOW("Commanded Diesel intake air flow control and relative intake air flow position"),
@@ -106,7 +112,9 @@ public enum AvailableCommandNames {
     COMMANDED_THROTTLE_ACTUATOR("Commanded throttle actuator control and relative throttle position"),
     FUEL_PRESSURE_CONTROL("Fuel pressure control system"),
     INJECTION_PRESSURE_CONTROL("Injection pressure control system"),
-    TURBOCHARGER_COMPRESSOR_INLET("Turbocharger compressor inlet pressure");
+    TURBOCHARGER_COMPRESSOR_INLET("Turbocharger compressor inlet pressure"),
+    FUEL_INJECTION_TIMING("Fuel injection timing"),
+    ENGINE_COOLANT_TEMPERATURE("Engine coolant temperature");
 
     private final String value;
 
