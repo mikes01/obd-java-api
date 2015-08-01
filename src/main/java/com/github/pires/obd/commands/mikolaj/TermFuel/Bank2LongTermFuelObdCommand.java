@@ -32,7 +32,7 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 public class Bank2LongTermFuelObdCommand extends TermFuelObdCommand {
 
     public Bank2LongTermFuelObdCommand() {
-        super("01 07");
+        super("01 09");
     }
 
     /**
