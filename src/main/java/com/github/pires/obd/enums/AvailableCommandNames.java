@@ -106,6 +106,8 @@ public enum AvailableCommandNames {
     FUEL_RAIL_ABSOLUTE("Fuel rail pressure (absolute)"),
     INTAKE_AIR_TEMP_SENSOR("Intake air temperature sensor"),
     COMMANDED_EGR("Commanded EGR and EGR Error"),
+    COMMANDED_EGR_ONLY("Only commanded EGR"),
+    EGR_ERROR("EGR error"),
     COMMANDED_DIESEL_INTAKE_AIR_FLOW("Commanded Diesel intake air flow control and relative intake air flow position"),
     EXHAUST_GAS_RECIRCULATION_TEMP("Exhaust gas recirculation temperature"),
     COMMANDED_THROTTLE_ACTUATOR("Commanded throttle actuator control and relative throttle position"),
@@ -158,7 +160,10 @@ public enum AvailableCommandNames {
     S5_WR_LAMBDA_VOL("O2S5_WR_lambda(1) Voltage"),
     S6_WR_LAMBDA_VOL("O2S6_WR_lambda(1) Voltage"),
     S7_WR_LAMBDA_VOL("O2S7_WR_lambda(1) Voltage"),
-    S8_WR_LAMBDA_VOL("O2S8_WR_lambda(1) Voltage");
+    S8_WR_LAMBDA_VOL("O2S8_WR_lambda(1) Voltage"),
+    COMMANDED_EVAPORATIVE_PURGE("Commanded evaporative purge"),
+    WARM_UPS("Number of warm-ups since codes cleared"),
+    SYSTEM_VAPOR("Evap. System Vapor Pressure");
 
     private final String value;
 
