@@ -47,7 +47,6 @@ public enum AvailableCommandNames {
     SPEED("Vehicle Speed"),
     MAF("Mass Air Flow"),
     THROTTLE_POS("Throttle Position"),
-    COMMANDED_THROTTLE_ACTUATOR("Commanded Throttle Actuator"),
     ABSOLUTE_THROTTLE_POS_B("Absolute Throttle Position B"),
     ABSOLUTE_THROTTLE_POS_C("Absolute Throttle Position C"),
     ABSOLUTE_THROTTLE_POS_D("Absolute Throttle Position D"),
@@ -112,7 +111,15 @@ public enum AvailableCommandNames {
     INJECTION_PRESSURE_CONTROL("Injection pressure control system"),
     TURBOCHARGER_COMPRESSOR_INLET("Turbocharger compressor inlet pressure"),
     FUEL_INJECTION_TIMING("Fuel injection timing"),
-    ENGINE_COOLANT_TEMPERATURE("Engine coolant temperature");
+    ENGINE_COOLANT_TEMPERATURE("Engine coolant temperature"),
+    FREEZE_DTC("Freeze DTC"),
+    FUEL_SYSTEM("Fuel System"),
+    TERM_FUEL("Term Fuel"),
+    SHORT_TERM_FUEL_BANK1("Short term fuel trim Bank 1"),
+    LONG_TERM_FUEL_BANK1("Long term fuel trim Bank 1"),
+    SHORT_TERM_FUEL_BANK2("Short term fuel trim Bank 2"),
+    LONG_TERM_FUEL_BANK2("Long term fuel trim Bank 2"),
+    COMMANDED_SECONDARY_AIR_STATUS("Commanded secondary air status");
 
     private final String value;
 
