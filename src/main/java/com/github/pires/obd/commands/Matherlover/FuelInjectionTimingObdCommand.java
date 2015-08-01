@@ -46,8 +46,8 @@ public class FuelInjectionTimingObdCommand extends PercentageObdCommand {
     @Override
     protected void performCalculations() {
         // ignore first two bytes [hh hh] of the response
-        double a = buffer.get(2);
-        double b = buffer.get(3);
+        float a = buffer.get(2);
+        float b = buffer.get(3);
         percentage = ((a * 256) - 26880) / 128;
     }
 

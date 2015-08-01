@@ -46,8 +46,8 @@ public class EvapObdCommand extends PressureObdCommand {
      */
     @Override
     protected final int preparePressureValue() {
-        double a = buffer.get(2);
-        double b = buffer.get(3);
+        int a = buffer.get(2);
+        int b = buffer.get(3);
         return ((a * 256 + b) - 32767) / 1000;
     }
 

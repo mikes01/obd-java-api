@@ -33,7 +33,7 @@ import com.github.pires.obd.commands.SystemOfUnits;
 public abstract class TemperatureObdCommand extends ObdCommand implements
         SystemOfUnits {
 
-    private float temperature = 0.0f;
+    protected float temperature = 0.0f;
 
     /**
      * Default ctor.

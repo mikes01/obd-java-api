@@ -20,9 +20,9 @@ public class CatalystTemperatureB2S1ObdCommand extends TemperatureObdCommand {
 
     @Override
     protected void performCalculations() {
-        double a = buffer.get(2);
-        double b = buffer.get(3);
-        temperature = (a * 256 + b) / 10 - 40
+        float a = buffer.get(2);
+        float b = buffer.get(3);
+        temperature = (a * 256 + b) / 10 - 40;
     }
 
     @Override

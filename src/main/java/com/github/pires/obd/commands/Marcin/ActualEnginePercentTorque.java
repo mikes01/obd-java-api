@@ -11,7 +11,7 @@ public class ActualEnginePercentTorque extends ObdCommand {
 
     private float afr = 0;
 
-    public ActualEAnginePercentTorque() {
+    public ActualEnginePercentTorque() {
         super("01 62");
     }
 

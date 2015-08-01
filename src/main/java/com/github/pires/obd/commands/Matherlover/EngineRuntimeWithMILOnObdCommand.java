@@ -57,6 +57,11 @@ public class EngineRuntimeWithMILOnObdCommand extends ObdCommand {
     }
 
     @Override
+    public String getFormattedResult() {
+        return String.format("%d%s", value, getResultUnit());
+    }
+
+    @Override
     public String getCalculatedResult() {
         return String.valueOf(value);
     }

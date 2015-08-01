@@ -6,7 +6,7 @@ import com.github.pires.obd.commands.ObdCommand;
 /**
  * Created by Marcin on 31.07.2015.
  */
-public class CommandedDieselIntakeAirFlowControl extends OdbCommand{
+public class CommandedDieselIntakeAirFlowControl extends ObdCommand{
     private float afr = 0;
 
     public CommandedDieselIntakeAirFlowControl() {
