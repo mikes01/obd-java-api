@@ -22,60 +22,29 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.github.pires.obd.commands.mikolaj;
+package com.github.pires.obd.commands.mikolaj.OxygenSensor;
 
-import com.github.pires.obd.commands.ObdCommand;
 import com.github.pires.obd.enums.AvailableCommandNames;
 
-public class TermFuelObdCommand extends ObdCommand {
+/**
+ * Temperature of intake air.
+ */
+public class Bank2Sensor1OxygenSensorObdCommand extends OxygenSensorObdCommand {
 
-    // Equivalent ratio (L/h)
-    private float termfuel = 0.0f;
-
-    /**
-     * Default ctor.
-     */
-    public TermFuelObdCommand(String cmd) {
-        super(cmd);
+    public Bank2Sensor1OxygenSensorObdCommand() {
+        super("01 18");
     }
 
     /**
-     * Copy ctor.
-     *
-     * @param other a {@link TermFuelObdCommand} object.
+     * @param other a {@link Bank1Sensor1OxygenSensorObdCommand} object.
      */
-    public TermFuelObdCommand(TermFuelObdCommand other) {
+    public Bank2Sensor1OxygenSensorObdCommand(Bank2Sensor1OxygenSensorObdCommand other) {
         super(other);
     }
 
     @Override
-    protected void performCalculations() {
-        // ignore first two bytes [hh hh] of the response
-        int a = buffer.get(2);
-        termfuel = ((a - 128) * 100) / 128;
-    }
-
-    /**
-     *
-     */
-    @Override
-    public String getFormattedResult() {
-        return String.format("%.1f%s", termfuel, getResultUnit());
-    }
-
-    @Override
-    public String getCalculatedResult() {
-        return String.valueOf(termfuel);
-    }
-
-    @Override
-    public String getResultUnit() {
-        return "%";
-    }
-
-    @Override
     public String getName() {
-        return AvailableCommandNames.TERM_FUEL.getValue();
+        return AvailableCommandNames.OXYGEN_SENSOR_BANK2_SENSOR1.getValue();
     }
 
 }

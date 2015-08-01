@@ -119,7 +119,26 @@ public enum AvailableCommandNames {
     LONG_TERM_FUEL_BANK1("Long term fuel trim Bank 1"),
     SHORT_TERM_FUEL_BANK2("Short term fuel trim Bank 2"),
     LONG_TERM_FUEL_BANK2("Long term fuel trim Bank 2"),
-    COMMANDED_SECONDARY_AIR_STATUS("Commanded secondary air status");
+    COMMANDED_SECONDARY_AIR_STATUS("Commanded secondary air status"),
+    OXYGEN_SENSORS_PRESENT("Oxygen sensors present"),
+    SECOND_TERM_FUEL("Second term fuel"),
+    SHORT_TERM_FUEL_BANK1_SENSOR1("Short term fuel from bank 1 sensor 1"),
+    SHORT_TERM_FUEL_BANK1_SENSOR2("Short term fuel from bank 1 sensor 2"),
+    SHORT_TERM_FUEL_BANK1_SENSOR3("Short term fuel from bank 1 sensor 3"),
+    SHORT_TERM_FUEL_BANK1_SENSOR4("Short term fuel from bank 1 sensor 4"),
+    SHORT_TERM_FUEL_BANK2_SENSOR1("Short term fuel from bank 2 sensor 1"),
+    SHORT_TERM_FUEL_BANK2_SENSOR2("Short term fuel from bank 2 sensor 2"),
+    SHORT_TERM_FUEL_BANK2_SENSOR3("Short term fuel from bank 2 sensor 3"),
+    SHORT_TERM_FUEL_BANK2_SENSOR4("Short term fuel from bank 2 sensor 4"),
+    OXYGEN_SENSOR("Oxygen sensor"),
+    OXYGEN_SENSOR_BANK1_SENSOR1("Oxygen sensor bank 1 sensor 1"),
+    OXYGEN_SENSOR_BANK1_SENSOR2("Oxygen sensor bank 1 sensor 2"),
+    OXYGEN_SENSOR_BANK1_SENSOR3("Oxygen sensor bank 1 sensor 3"),
+    OXYGEN_SENSOR_BANK1_SENSOR4("Oxygen sensor bank 1 sensor 4"),
+    OXYGEN_SENSOR_BANK2_SENSOR1("Oxygen sensor bank 2 sensor 1"),
+    OXYGEN_SENSOR_BANK2_SENSOR2("Oxygen sensor bank 2 sensor 2"),
+    OXYGEN_SENSOR_BANK2_SENSOR3("Oxygen sensor bank 2 sensor 3"),
+    OXYGEN_SENSOR_BANK2_SENSOR4("Oxygen sensor bank 2 sensor 4");
 
     private final String value;
 

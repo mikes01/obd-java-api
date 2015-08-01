@@ -22,55 +22,29 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.github.pires.obd.commands.mikolaj;
+package com.github.pires.obd.commands.mikolaj.OxygenSensor;
 
-import com.github.pires.obd.commands.mikolaj.TermFuel.Bank2ShortTermFuelObdCommand;
 import com.github.pires.obd.enums.AvailableCommandNames;
-import com.github.pires.obd.commands.ObdCommand;
-import com.github.pires.obd.enums.CommandedSecondaryAirStatus;
 
 /**
  * Temperature of intake air.
  */
-public class CommandedSecondaryAirStatusObdCommand extends ObdCommand {
+public class Bank1Sensor2OxygenSensorObdCommand extends OxygenSensorObdCommand {
 
-    private int commandedSecondaryAirStatus = 0;
-
-    public CommandedSecondaryAirStatusObdCommand() {
-        super("01 12");
+    public Bank1Sensor2OxygenSensorObdCommand() {
+        super("01 15");
     }
 
-
     /**
-     * @param other a {@link Bank2ShortTermFuelObdCommand} object.
+     * @param other a {@link Bank1Sensor1OxygenSensorObdCommand} object.
      */
-    public CommandedSecondaryAirStatusObdCommand(CommandedSecondaryAirStatusObdCommand other) {
+    public Bank1Sensor2OxygenSensorObdCommand(Bank1Sensor2OxygenSensorObdCommand other) {
         super(other);
     }
 
     @Override
-    protected void performCalculations() {
-        // ignore first two bytes [hh hh] of the response
-        commandedSecondaryAirStatus = buffer.get(2);
-    }
-
-    @Override
-    public String getFormattedResult() {
-        try {
-            return CommandedSecondaryAirStatus.fromValue(commandedSecondaryAirStatus).getDescription();
-        } catch (NullPointerException e) {
-            return "-";
-        }
-    }
-
-    @Override
-    public String getCalculatedResult() {
-        return String.valueOf(commandedSecondaryAirStatus);
-    }
-
-    @Override
     public String getName() {
-        return AvailableCommandNames.COMMANDED_SECONDARY_AIR_STATUS.getValue();
+        return AvailableCommandNames.OXYGEN_SENSOR_BANK1_SENSOR2.getValue();
     }
 
 }

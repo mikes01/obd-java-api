@@ -22,29 +22,29 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.github.pires.obd.commands.mikolaj;
+package com.github.pires.obd.commands.mikolaj.OxygenSensor;
 
 import com.github.pires.obd.enums.AvailableCommandNames;
 
 /**
  * Temperature of intake air.
  */
-public class Bank2ShortTermFuelObdCommand extends TermFuelObdCommand {
+public class Bank1Sensor1OxygenSensorObdCommand extends OxygenSensorObdCommand {
 
-    public Bank2ShortTermFuelObdCommand() {
-        super("01 08");
+    public Bank1Sensor1OxygenSensorObdCommand() {
+        super("01 14");
     }
 
     /**
-     * @param other a {@link com.github.pires.obd.commands.mikolaj.Bank2ShortTermFuelObdCommand} object.
+     * @param other a {@link Bank1Sensor1OxygenSensorObdCommand} object.
      */
-    public Bank2ShortTermFuelObdCommand(Bank2ShortTermFuelObdCommand other) {
+    public Bank1Sensor1OxygenSensorObdCommand(Bank1Sensor1OxygenSensorObdCommand other) {
         super(other);
     }
 
     @Override
     public String getName() {
-        return AvailableCommandNames.SHORT_TERM_FUEL_BANK2.getValue();
+        return AvailableCommandNames.OXYGEN_SENSOR_BANK1_SENSOR1.getValue();
     }
 
 }

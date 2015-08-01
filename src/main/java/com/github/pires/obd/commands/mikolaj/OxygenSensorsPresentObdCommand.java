@@ -24,53 +24,46 @@
  */
 package com.github.pires.obd.commands.mikolaj;
 
-import com.github.pires.obd.commands.mikolaj.TermFuel.Bank2ShortTermFuelObdCommand;
-import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
-import com.github.pires.obd.enums.CommandedSecondaryAirStatus;
+import com.github.pires.obd.enums.AvailableCommandNames;
 
-/**
- * Temperature of intake air.
- */
-public class CommandedSecondaryAirStatusObdCommand extends ObdCommand {
-
-    private int commandedSecondaryAirStatus = 0;
-
-    public CommandedSecondaryAirStatusObdCommand() {
-        super("01 12");
-    }
-
+public class OxygenSensorsPresentObdCommand extends ObdCommand {
 
     /**
-     * @param other a {@link Bank2ShortTermFuelObdCommand} object.
+     * Default ctor.
      */
-    public CommandedSecondaryAirStatusObdCommand(CommandedSecondaryAirStatusObdCommand other) {
+    public OxygenSensorsPresentObdCommand() {
+        super("01 13");
+    }
+
+    /**
+     * Copy ctor.
+     *
+     * @param other a {@link FreezeDTCObdCommand} object.
+     */
+    public OxygenSensorsPresentObdCommand(OxygenSensorsPresentObdCommand other) {
         super(other);
     }
 
     @Override
     protected void performCalculations() {
-        // ignore first two bytes [hh hh] of the response
-        commandedSecondaryAirStatus = buffer.get(2);
+
     }
+
 
     @Override
     public String getFormattedResult() {
-        try {
-            return CommandedSecondaryAirStatus.fromValue(commandedSecondaryAirStatus).getDescription();
-        } catch (NullPointerException e) {
-            return "-";
-        }
+        return Integer.toBinaryString(buffer.get(2));
     }
 
     @Override
     public String getCalculatedResult() {
-        return String.valueOf(commandedSecondaryAirStatus);
+        return Integer.toBinaryString(buffer.get(2));
     }
 
     @Override
     public String getName() {
-        return AvailableCommandNames.COMMANDED_SECONDARY_AIR_STATUS.getValue();
+        return AvailableCommandNames.OXYGEN_SENSORS_PRESENT.getValue();
     }
 
 }
