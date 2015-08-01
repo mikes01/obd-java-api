@@ -142,7 +142,23 @@ public enum AvailableCommandNames {
     OXYGEN_SENSOR_BANK2_SENSOR3("Oxygen sensor bank 2 sensor 3"),
     OXYGEN_SENSOR_BANK2_SENSOR4("Oxygen sensor bank 2 sensor 4"),
     OBD_STANDARD("OBD standards this vehicle conforms to"),
-    AUXILLARY_INPUT_STATUS("Auxillary input status");
+    AUXILLARY_INPUT_STATUS("Auxillary input status"),
+    S1_WR_LAMBDA_ER("O2S1_WR_lambda(1) Equivalence Ratio"),
+    S2_WR_LAMBDA_ER("O2S2_WR_lambda(1) Equivalence Ratio"),
+    S3_WR_LAMBDA_ER("O2S3_WR_lambda(1) Equivalence Ratio"),
+    S4_WR_LAMBDA_ER("O2S4_WR_lambda(1) Equivalence Ratio"),
+    S5_WR_LAMBDA_ER("O2S5_WR_lambda(1) Equivalence Ratio"),
+    S6_WR_LAMBDA_ER("O2S6_WR_lambda(1) Equivalence Ratio"),
+    S7_WR_LAMBDA_ER("O2S7_WR_lambda(1) Equivalence Ratio"),
+    S8_WR_LAMBDA_ER("O2S8_WR_lambda(1) Equivalence Ratio"),
+    S1_WR_LAMBDA_VOL("O2S1_WR_lambda(1) Voltage"),
+    S2_WR_LAMBDA_VOL("O2S2_WR_lambda(1) Voltage"),
+    S3_WR_LAMBDA_VOL("O2S3_WR_lambda(1) Voltage"),
+    S4_WR_LAMBDA_VOL("O2S4_WR_lambda(1) Voltage"),
+    S5_WR_LAMBDA_VOL("O2S5_WR_lambda(1) Voltage"),
+    S6_WR_LAMBDA_VOL("O2S6_WR_lambda(1) Voltage"),
+    S7_WR_LAMBDA_VOL("O2S7_WR_lambda(1) Voltage"),
+    S8_WR_LAMBDA_VOL("O2S8_WR_lambda(1) Voltage");
 
     private final String value;
 
