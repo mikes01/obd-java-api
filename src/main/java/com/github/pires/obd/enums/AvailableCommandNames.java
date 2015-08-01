@@ -70,12 +70,14 @@ public enum AvailableCommandNames {
     CONTROL_MODULE_VOLTAGE("Control Module Power Supply "),
     ENGINE_FUEL_RATE("Engine Fuel Rate"),
     FUEL_RAIL_PRESSURE("Fuel Rail Pressure"),
+    FUEL_RAIL_PRESSURE2("Fuel Rail Pressure (relative to manifold vacuum)"),
     VIN("Vehicle Identification Number (VIN)"),
     DISTANCE_TRAVELED_MIL_ON("Distance traveled with MIL on"),
     TIME_TRAVELED_MIL_ON("Time run with MIL on"),
     TIME_SINCE_TC_CLEARED("Time since trouble codes cleared"),
     REL_THROTTLE_POS("Relative throttle position"),
     PIDS("Available PIDs"),
+    PIDS_2("PIDs supported [21 - 40]"),
     PIDS_3("Available PIDs 3"),
     PIDS_4("Available PIDs 4"),
     ABS_LOAD("Absolute load"),
@@ -138,7 +140,9 @@ public enum AvailableCommandNames {
     OXYGEN_SENSOR_BANK2_SENSOR1("Oxygen sensor bank 2 sensor 1"),
     OXYGEN_SENSOR_BANK2_SENSOR2("Oxygen sensor bank 2 sensor 2"),
     OXYGEN_SENSOR_BANK2_SENSOR3("Oxygen sensor bank 2 sensor 3"),
-    OXYGEN_SENSOR_BANK2_SENSOR4("Oxygen sensor bank 2 sensor 4");
+    OXYGEN_SENSOR_BANK2_SENSOR4("Oxygen sensor bank 2 sensor 4"),
+    OBD_STANDARD("OBD standards this vehicle conforms to"),
+    AUXILLARY_INPUT_STATUS("Auxillary input status");
 
     private final String value;
 
