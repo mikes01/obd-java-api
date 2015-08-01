@@ -180,8 +180,7 @@ public enum AvailableCommandNames {
     MONITOR_STATUS("Monitor current drive cycle status (bits explained at wiki)"),
     EMISSION_REQUIREMENTS("Emission Requirements (Encoded)"),
     MAX_AIR_FLOW("Maximum value for air flow rate from mass air flow sensor"),
-    MAX_VALUE_SENSORS("Maximum value for equivalence ratio, oxygen sensor voltage, oxygen sensor current, and intake manifold absolute pressure"),
-    SYSTEM_VAPOR("Evap. System Vapor Pressure");
+    MAX_VALUE_SENSORS("Maximum value for equivalence ratio, oxygen sensor voltage, oxygen sensor current, and intake manifold absolute pressure");
 
     private final String value;
 

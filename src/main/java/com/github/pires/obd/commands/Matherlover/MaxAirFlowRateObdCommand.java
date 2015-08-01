@@ -25,6 +25,11 @@ public class MaxAirFlowRateObdCommand extends ObdCommand {
     }
 
     @Override
+    public String getCalculatedResult() {
+        return String.valueOf(value);
+    }
+
+    @Override
     public String getName() {
         return AvailableCommandNames.MAX_AIR_FLOW.getValue();
     }

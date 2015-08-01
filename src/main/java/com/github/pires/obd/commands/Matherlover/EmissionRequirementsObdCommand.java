@@ -25,6 +25,11 @@ public class EmissionRequirementsObdCommand extends ObdCommand {
     }
 
     @Override
+    public String getCalculatedResult() {
+        return String.valueOf(value);
+    }
+
+    @Override
     public String getName() {
         return AvailableCommandNames.EMISSION_REQUIREMENTS.getValue();
     }

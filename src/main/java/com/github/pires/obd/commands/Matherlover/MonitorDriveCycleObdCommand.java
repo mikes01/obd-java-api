@@ -29,6 +29,11 @@ public class MonitorDriveCycleObdCommand extends ObdCommand {
     }
 
     @Override
+    public String getCalculatedResult() {
+        return String.format("second = %.2f; third = %.2f; fourth = %.2f;", second, third, fourth);
+    }
+
+    @Override
     public String getName() {
         return AvailableCommandNames.MONITOR_STATUS.getValue();
     }

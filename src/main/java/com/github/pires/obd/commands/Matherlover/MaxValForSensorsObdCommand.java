@@ -31,6 +31,11 @@ public class MaxValForSensorsObdCommand extends ObdCommand {
     }
 
     @Override
+    public String getCalculatedResult() {
+        return String.format("second = %.2f; third = %.2f; fourth = %.2f; fifth = %.2f;", second, third, fourth, fifth);
+    }
+
+    @Override
     public String getName() {
         return AvailableCommandNames.MAX_VALUE_SENSORS.getValue();
     }
