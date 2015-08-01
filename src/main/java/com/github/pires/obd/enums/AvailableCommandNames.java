@@ -163,7 +163,20 @@ public enum AvailableCommandNames {
     S8_WR_LAMBDA_VOL("O2S8_WR_lambda(1) Voltage"),
     COMMANDED_EVAPORATIVE_PURGE("Commanded evaporative purge"),
     WARM_UPS("Number of warm-ups since codes cleared"),
-    SYSTEM_VAPOR("Evap. System Vapor Pressure");
+    SYSTEM_VAPOR("Evap. System Vapor Pressure"),
+    BOOST_PREASURE_CONTROL("Boost pressure control"),
+    VARIABLE_GEOMETRY_TURBO("Variable Geometry turbo (VGT) control"),
+    WASTEGATE_CONTROL("Wastegate control"),
+    EXHAUST_PRESSURE("Exhaust pressure"),
+    TURBOCHARGER_RPM("Turbocharger RPM"),
+    TURBOCHARGER_TEMP1("Turbocharger temperature 1"),
+    TURBOCHARGER_TEMP2("Turbocharger temperature 2"),
+    CHARGE_AIR_COOLER_TEMP("Charge air cooler temperature (CACT)"),
+    EXHAUST_GAS_TEMP_BANK1("Exhaust Gas temperature (EGT) Bank 1"),
+    EXHAUST_GAS_TEMP_BANK2("Exhaust Gas temperature (EGT) Bank 2"),
+    DIESEL_PARTICULATE_FILTER1("Diesel particulate filter (DPF) 1"),
+    DIESEL_PARTICULATE_FILTER2("Diesel particulate filter (DPF) 2"),
+    DIESEL_PARTICULATE_FILTER_TEMP("Diesel particulate filter (DPF) temperature");
 
     private final String value;
 
