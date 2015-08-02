@@ -6,11 +6,11 @@ import com.github.pires.obd.commands.ObdCommand;
 /**
  * Created by Marcin on 31.07.2015.
  */
-public class CommandedThrottleActuatorControl extends ObdCommand {
+public class InjectionPressureControlSystemObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public CommandedThrottleActuatorControl() {
-        super("01 6C");
+    public InjectionPressureControlSystemObdCommand() {
+        super("01 6E");
     }
 
     @Override
@@ -22,7 +22,7 @@ public class CommandedThrottleActuatorControl extends ObdCommand {
         float D = buffer.get(5);
         float E = buffer.get(6);
 
-        afr = A + B + C + D + E;
+        afr = A + B + C + D + E ;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class CommandedThrottleActuatorControl extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.COMMANDED_THROTTLE_ACTUATOR.getValue();
+        return AvailableCommandNames.INJECTION_PRESSURE_CONTROL.getValue();
     }
 
 }

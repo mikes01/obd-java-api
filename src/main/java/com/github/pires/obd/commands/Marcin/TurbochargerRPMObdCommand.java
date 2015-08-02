@@ -1,16 +1,16 @@
 package com.github.pires.obd.commands.Marcin;
 
-import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
+import com.github.pires.obd.enums.AvailableCommandNames;
 
 /**
  * Created by Marcin on 01.08.2015.
  */
-public class WastegateControl extends ObdCommand {
+public class TurbochargerRPMObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public WastegateControl() {
-        super("01 72");
+    public TurbochargerRPMObdCommand() {
+        super("01 74");
     }
 
     @Override
@@ -41,7 +41,7 @@ public class WastegateControl extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.WASTEGATE_CONTROL.getValue();
+        return AvailableCommandNames.TURBOCHARGER_RPM.getValue();
     }
 
 }

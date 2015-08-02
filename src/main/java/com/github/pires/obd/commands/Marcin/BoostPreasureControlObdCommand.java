@@ -6,11 +6,11 @@ import com.github.pires.obd.commands.ObdCommand;
 /**
  * Created by Marcin on 01.08.2015.
  */
-public class ExhaustGasTemperatureBank1 extends ObdCommand {
+public class BoostPreasureControlObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public ExhaustGasTemperatureBank1() {
-        super("01 78");
+    public BoostPreasureControlObdCommand() {
+        super("01 70");
     }
 
     @Override
@@ -45,7 +45,7 @@ public class ExhaustGasTemperatureBank1 extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.EXHAUST_GAS_TEMP_BANK1.getValue();
+        return AvailableCommandNames.BOOST_PREASURE_CONTROL.getValue();
     }
 
 }

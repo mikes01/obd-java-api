@@ -6,25 +6,25 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 /**
  * Created by Marcin on 2015-07-29.
  */
-
-public class EnginePercentTorqueData extends ObdCommand {
-
+public class EngineCoolantTemperatureObdCommand extends ObdCommand{
     private float afr = 0;
 
-    public EnginePercentTorqueData() {
-        super("01 64");
+    public EngineCoolantTemperatureObdCommand() {
+        super("01 67");
     }
 
     @Override
     protected void performCalculations() {
-        // ignore first two bytes [01 64] of the response
+        // ignore first two bytes [01 67] of the response
         float A = buffer.get(2);
-        afr = A - 125;
+        float B = buffer.get(3);
+        float C = buffer.get(4);
+        afr = ( (int)A << 8 ) + ( (int)B << 8 ) + ( (int)C << 8 );
     }
 
     @Override
     public String getFormattedResult() {
-        return String.format("%.2f", getAfr() + "%");
+        return String.format("%d", getAfr());
     }
 
     @Override
@@ -38,8 +38,6 @@ public class EnginePercentTorqueData extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.ENGINE_PERCENT_TORQUE_DATA.getValue();
+        return AvailableCommandNames.ENGINE_COOLANT_TEMPERATURE.getValue();
     }
-
 }
-

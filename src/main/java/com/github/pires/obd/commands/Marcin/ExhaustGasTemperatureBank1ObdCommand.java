@@ -4,13 +4,13 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
 
 /**
- * Created by Marcin on 31.07.2015.
+ * Created by Marcin on 01.08.2015.
  */
-public class CommandedEgrAndEgrError extends ObdCommand {
+public class ExhaustGasTemperatureBank1ObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public CommandedEgrAndEgrError() {
-        super("01 69");
+    public ExhaustGasTemperatureBank1ObdCommand() {
+        super("01 78");
     }
 
     @Override
@@ -23,7 +23,10 @@ public class CommandedEgrAndEgrError extends ObdCommand {
         float E = buffer.get(6);
         float F = buffer.get(7);
         float G = buffer.get(8);
-        afr = A + B + C + D + E + F + G;
+        float H = buffer.get(9);
+        float I = buffer.get(10);
+
+        afr = A + B + C + D + E + F + G + H + I;
     }
 
     @Override
@@ -42,7 +45,7 @@ public class CommandedEgrAndEgrError extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.COMMANDED_EGR.getValue();
+        return AvailableCommandNames.EXHAUST_GAS_TEMP_BANK1.getValue();
     }
 
 }

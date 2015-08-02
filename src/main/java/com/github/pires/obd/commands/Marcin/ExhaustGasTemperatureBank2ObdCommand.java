@@ -4,13 +4,13 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
 
 /**
- * Created by Marcin on 31.07.2015.
+ * Created by Marcin on 01.08.2015.
  */
-public class InjectionPressureControlSystem extends ObdCommand {
+public class ExhaustGasTemperatureBank2ObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public InjectionPressureControlSystem() {
-        super("01 6E");
+    public ExhaustGasTemperatureBank2ObdCommand() {
+        super("01 79");
     }
 
     @Override
@@ -21,8 +21,12 @@ public class InjectionPressureControlSystem extends ObdCommand {
         float C = buffer.get(4);
         float D = buffer.get(5);
         float E = buffer.get(6);
+        float F = buffer.get(7);
+        float G = buffer.get(8);
+        float H = buffer.get(9);
+        float I = buffer.get(10);
 
-        afr = A + B + C + D + E ;
+        afr = A + B + C + D + E + F + G;
     }
 
     @Override
@@ -41,7 +45,7 @@ public class InjectionPressureControlSystem extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.INJECTION_PRESSURE_CONTROL.getValue();
+        return AvailableCommandNames.EXHAUST_GAS_TEMP_BANK2.getValue();
     }
 
 }

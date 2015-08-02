@@ -3,15 +3,14 @@ package com.github.pires.obd.commands.Marcin;
 import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
 
-
 /**
  * Created by Marcin on 01.08.2015.
  */
-public class DieselParticulateFilter1 extends ObdCommand {
+public class DieselParticulateFilterTemperatureObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public DieselParticulateFilter1() {
-        super("01 7A");
+    public DieselParticulateFilterTemperatureObdCommand() {
+        super("01 7C");
     }
 
     @Override
@@ -43,7 +42,7 @@ public class DieselParticulateFilter1 extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.DIESEL_PARTICULATE_FILTER1.getValue();
+        return AvailableCommandNames.DIESEL_PARTICULATE_FILTER_TEMP.getValue();
     }
 
 }

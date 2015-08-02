@@ -1,16 +1,16 @@
 package com.github.pires.obd.commands.Marcin;
 
-import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
+import com.github.pires.obd.enums.AvailableCommandNames;
 
 /**
- * Created by Marcin on 01.08.2015.
+ * Created by Marcin on 31.07.2015.
  */
-public class ExhaustGasTemperatureBank2 extends ObdCommand {
+public class ExhaustGasRecirculationTemperatureObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public ExhaustGasTemperatureBank2() {
-        super("01 79");
+    public ExhaustGasRecirculationTemperatureObdCommand() {
+        super("01 6B");
     }
 
     @Override
@@ -21,12 +21,8 @@ public class ExhaustGasTemperatureBank2 extends ObdCommand {
         float C = buffer.get(4);
         float D = buffer.get(5);
         float E = buffer.get(6);
-        float F = buffer.get(7);
-        float G = buffer.get(8);
-        float H = buffer.get(9);
-        float I = buffer.get(10);
 
-        afr = A + B + C + D + E + F + G;
+        afr = A + B + C + D + E;
     }
 
     @Override
@@ -45,7 +41,7 @@ public class ExhaustGasTemperatureBank2 extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.EXHAUST_GAS_TEMP_BANK2.getValue();
+        return AvailableCommandNames.EXHAUST_GAS_RECIRCULATION_TEMP.getValue();
     }
 
 }

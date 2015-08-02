@@ -3,14 +3,15 @@ package com.github.pires.obd.commands.Marcin;
 import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
 
+
 /**
  * Created by Marcin on 01.08.2015.
  */
-public class BoostPreasureControl extends ObdCommand {
+public class DieselParticulateFilter1ObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public BoostPreasureControl() {
-        super("01 70");
+    public DieselParticulateFilter1ObdCommand() {
+        super("01 7A");
     }
 
     @Override
@@ -23,10 +24,7 @@ public class BoostPreasureControl extends ObdCommand {
         float E = buffer.get(6);
         float F = buffer.get(7);
         float G = buffer.get(8);
-        float H = buffer.get(9);
-        float I = buffer.get(10);
-
-        afr = A + B + C + D + E + F + G + H + I;
+        afr = A + B + C + D + E + F + G;
     }
 
     @Override
@@ -45,7 +43,7 @@ public class BoostPreasureControl extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.BOOST_PREASURE_CONTROL.getValue();
+        return AvailableCommandNames.DIESEL_PARTICULATE_FILTER1.getValue();
     }
 
 }

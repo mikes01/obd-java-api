@@ -4,13 +4,13 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
 
 /**
- * Created by Marcin on 01.08.2015.
+ * Created by Marcin on 31.07.2015.
  */
-public class ChargeAirCoolerTemperature extends ObdCommand {
+public class CommandedDieselIntakeAirFlowControlObdCommand extends ObdCommand{
     private float afr = 0;
 
-    public ChargeAirCoolerTemperature() {
-        super("01 77");
+    public CommandedDieselIntakeAirFlowControlObdCommand() {
+        super("01 6A");
     }
 
     @Override
@@ -41,7 +41,7 @@ public class ChargeAirCoolerTemperature extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.CHARGE_AIR_COOLER_TEMP.getValue();
+        return AvailableCommandNames.COMMANDED_DIESEL_INTAKE_AIR_FLOW.getValue();
     }
 
 }

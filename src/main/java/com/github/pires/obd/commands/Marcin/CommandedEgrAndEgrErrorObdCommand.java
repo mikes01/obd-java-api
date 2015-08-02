@@ -6,11 +6,11 @@ import com.github.pires.obd.commands.ObdCommand;
 /**
  * Created by Marcin on 31.07.2015.
  */
-public class TurbochargerCompressorInletPressure extends ObdCommand {
+public class CommandedEgrAndEgrErrorObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public TurbochargerCompressorInletPressure() {
-        super("01 6F");
+    public CommandedEgrAndEgrErrorObdCommand() {
+        super("01 69");
     }
 
     @Override
@@ -19,8 +19,11 @@ public class TurbochargerCompressorInletPressure extends ObdCommand {
         float A = buffer.get(2);
         float B = buffer.get(3);
         float C = buffer.get(4);
-
-        afr = A + B + C;
+        float D = buffer.get(5);
+        float E = buffer.get(6);
+        float F = buffer.get(7);
+        float G = buffer.get(8);
+        afr = A + B + C + D + E + F + G;
     }
 
     @Override
@@ -39,7 +42,7 @@ public class TurbochargerCompressorInletPressure extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.TURBOCHARGER_COMPRESSOR_INLET.getValue();
+        return AvailableCommandNames.COMMANDED_EGR.getValue();
     }
 
 }

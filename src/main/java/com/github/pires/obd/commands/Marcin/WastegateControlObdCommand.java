@@ -6,11 +6,11 @@ import com.github.pires.obd.commands.ObdCommand;
 /**
  * Created by Marcin on 01.08.2015.
  */
-public class DieselParticulateFilter2 extends ObdCommand {
+public class WastegateControlObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public DieselParticulateFilter2() {
-        super("01 7B");
+    public WastegateControlObdCommand() {
+        super("01 72");
     }
 
     @Override
@@ -21,9 +21,8 @@ public class DieselParticulateFilter2 extends ObdCommand {
         float C = buffer.get(4);
         float D = buffer.get(5);
         float E = buffer.get(6);
-        float F = buffer.get(7);
-        float G = buffer.get(8);
-        afr = A + B + C + D + E + F + G;
+
+        afr = A + B + C + D + E;
     }
 
     @Override
@@ -42,7 +41,7 @@ public class DieselParticulateFilter2 extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.DIESEL_PARTICULATE_FILTER2.getValue();
+        return AvailableCommandNames.WASTEGATE_CONTROL.getValue();
     }
 
 }

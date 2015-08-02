@@ -6,11 +6,11 @@ import com.github.pires.obd.commands.ObdCommand;
 /**
  * Created by Marcin on 01.08.2015.
  */
-public class ExhaustPressure extends ObdCommand {
+public class DieselParticulateFilter2ObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public ExhaustPressure() {
-        super("01 73");
+    public DieselParticulateFilter2ObdCommand() {
+        super("01 7B");
     }
 
     @Override
@@ -21,8 +21,9 @@ public class ExhaustPressure extends ObdCommand {
         float C = buffer.get(4);
         float D = buffer.get(5);
         float E = buffer.get(6);
-
-        afr = A + B + C + D + E;
+        float F = buffer.get(7);
+        float G = buffer.get(8);
+        afr = A + B + C + D + E + F + G;
     }
 
     @Override
@@ -41,7 +42,7 @@ public class ExhaustPressure extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.EXHAUST_PRESSURE.getValue();
+        return AvailableCommandNames.DIESEL_PARTICULATE_FILTER2.getValue();
     }
 
 }

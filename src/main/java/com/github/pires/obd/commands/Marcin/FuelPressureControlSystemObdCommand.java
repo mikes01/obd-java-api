@@ -6,10 +6,10 @@ import com.github.pires.obd.commands.ObdCommand;
 /**
  * Created by Marcin on 31.07.2015.
  */
-public class FuelPressureControlSystem extends ObdCommand {
+public class FuelPressureControlSystemObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public FuelPressureControlSystem() {
+    public FuelPressureControlSystemObdCommand() {
         super("01 6D");
     }
 

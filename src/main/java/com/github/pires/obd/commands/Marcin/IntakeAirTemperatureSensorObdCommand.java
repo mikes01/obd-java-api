@@ -1,16 +1,16 @@
 package com.github.pires.obd.commands.Marcin;
 
-import com.github.pires.obd.commands.ObdCommand;
 import com.github.pires.obd.enums.AvailableCommandNames;
+import com.github.pires.obd.commands.ObdCommand;
 
 /**
- * Created by Marcin on 01.08.2015.
+ * Created by Marcin on 2015-07-29.
  */
-public class TurbochargerRPM extends ObdCommand {
+public class IntakeAirTemperatureSensorObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public TurbochargerRPM() {
-        super("01 74");
+    public IntakeAirTemperatureSensorObdCommand() {
+        super("01 68");
     }
 
     @Override
@@ -21,8 +21,9 @@ public class TurbochargerRPM extends ObdCommand {
         float C = buffer.get(4);
         float D = buffer.get(5);
         float E = buffer.get(6);
-
-        afr = A + B + C + D + E;
+        float F = buffer.get(7);
+        float G = buffer.get(8);
+        afr = A + B + C + D + E + F + G;
     }
 
     @Override
@@ -41,7 +42,7 @@ public class TurbochargerRPM extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.TURBOCHARGER_RPM.getValue();
+        return AvailableCommandNames.INTAKE_AIR_TEMP_SENSOR.getValue();
     }
 
 }

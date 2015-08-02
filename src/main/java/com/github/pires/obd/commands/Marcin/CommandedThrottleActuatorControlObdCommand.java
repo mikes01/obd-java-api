@@ -4,13 +4,13 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
 
 /**
- * Created by Marcin on 01.08.2015.
+ * Created by Marcin on 31.07.2015.
  */
-public class VariableGeometryTurboControl extends ObdCommand {
+public class CommandedThrottleActuatorControlObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public VariableGeometryTurboControl() {
-        super("01 71");
+    public CommandedThrottleActuatorControlObdCommand() {
+        super("01 6C");
     }
 
     @Override
@@ -41,7 +41,7 @@ public class VariableGeometryTurboControl extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.VARIABLE_GEOMETRY_TURBO.getValue();
+        return AvailableCommandNames.COMMANDED_THROTTLE_ACTUATOR.getValue();
     }
 
 }

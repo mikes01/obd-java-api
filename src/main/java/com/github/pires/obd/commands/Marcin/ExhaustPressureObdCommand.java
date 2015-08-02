@@ -1,29 +1,33 @@
 package com.github.pires.obd.commands.Marcin;
 
-import com.github.pires.obd.commands.ObdCommand;
 import com.github.pires.obd.enums.AvailableCommandNames;
+import com.github.pires.obd.commands.ObdCommand;
 
 /**
- * Created by Marcin on 2015-07-29.
+ * Created by Marcin on 01.08.2015.
  */
-public class AuxInputOutput extends ObdCommand {
+public class ExhaustPressureObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public AuxInputOutput() {
-        super("01 65");
+    public ExhaustPressureObdCommand() {
+        super("01 73");
     }
 
     @Override
     protected void performCalculations() {
-        // ignore first two bytes [01 62] of the response
+        // ignore first two bytes [01 63] of the response
         float A = buffer.get(2);
         float B = buffer.get(3);
-        afr = A * 256 + B;
+        float C = buffer.get(4);
+        float D = buffer.get(5);
+        float E = buffer.get(6);
+
+        afr = A + B + C + D + E;
     }
 
     @Override
     public String getFormattedResult() {
-        return String.format("%d", getAfr());
+        return String.format("%.2f", getAfr());
     }
 
     @Override
@@ -37,7 +41,7 @@ public class AuxInputOutput extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.AUX_IO.getValue();
+        return AvailableCommandNames.EXHAUST_PRESSURE.getValue();
     }
 
 }

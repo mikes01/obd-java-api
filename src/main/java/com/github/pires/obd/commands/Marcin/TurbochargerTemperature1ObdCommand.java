@@ -6,11 +6,11 @@ import com.github.pires.obd.commands.ObdCommand;
 /**
  * Created by Marcin on 01.08.2015.
  */
-public class DieselParticulateFilterTemperature extends ObdCommand {
+public class TurbochargerTemperature1ObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public DieselParticulateFilterTemperature() {
-        super("01 7C");
+    public TurbochargerTemperature1ObdCommand() {
+        super("01 75");
     }
 
     @Override
@@ -42,7 +42,7 @@ public class DieselParticulateFilterTemperature extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.DIESEL_PARTICULATE_FILTER_TEMP.getValue();
+        return AvailableCommandNames.TURBOCHARGER_TEMP1.getValue();
     }
 
 }

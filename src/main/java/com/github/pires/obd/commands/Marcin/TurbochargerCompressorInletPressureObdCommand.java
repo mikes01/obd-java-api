@@ -1,16 +1,16 @@
 package com.github.pires.obd.commands.Marcin;
 
-import com.github.pires.obd.commands.ObdCommand;
 import com.github.pires.obd.enums.AvailableCommandNames;
+import com.github.pires.obd.commands.ObdCommand;
 
 /**
  * Created by Marcin on 31.07.2015.
  */
-public class ExhaustGasRecirculationTemperature extends ObdCommand {
+public class TurbochargerCompressorInletPressureObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public ExhaustGasRecirculationTemperature() {
-        super("01 6B");
+    public TurbochargerCompressorInletPressureObdCommand() {
+        super("01 6F");
     }
 
     @Override
@@ -19,10 +19,8 @@ public class ExhaustGasRecirculationTemperature extends ObdCommand {
         float A = buffer.get(2);
         float B = buffer.get(3);
         float C = buffer.get(4);
-        float D = buffer.get(5);
-        float E = buffer.get(6);
 
-        afr = A + B + C + D + E;
+        afr = A + B + C;
     }
 
     @Override
@@ -41,7 +39,7 @@ public class ExhaustGasRecirculationTemperature extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.EXHAUST_GAS_RECIRCULATION_TEMP.getValue();
+        return AvailableCommandNames.TURBOCHARGER_COMPRESSOR_INLET.getValue();
     }
 
 }

@@ -6,28 +6,25 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 /**
  * Created by Marcin on 2015-07-29.
  */
-public class MassAirFlowSensor extends ObdCommand {
+
+public class EnginePercentTorqueDataObdCommand extends ObdCommand {
 
     private float afr = 0;
 
-    public MassAirFlowSensor() {
-        super("01 66");
+    public EnginePercentTorqueDataObdCommand() {
+        super("01 64");
     }
 
     @Override
     protected void performCalculations() {
-        // ignore first two bytes [01 66] of the response
+        // ignore first two bytes [01 64] of the response
         float A = buffer.get(2);
-        float B = buffer.get(3);
-        float C = buffer.get(4);
-        float D = buffer.get(5);
-        float E = buffer.get(6);
-        afr = ( (int)A << 8 ) + ( (int)B << 8 ) + ( (int)C << 8 ) + ( (int)D << 8 ) + ( (int)E << 8 );
+        afr = A - 125;
     }
 
     @Override
     public String getFormattedResult() {
-        return String.format("%d", getAfr());
+        return String.format("%.2f", getAfr() + "%");
     }
 
     @Override
@@ -41,7 +38,8 @@ public class MassAirFlowSensor extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.MAF_SENSOR.getValue();
+        return AvailableCommandNames.ENGINE_PERCENT_TORQUE_DATA.getValue();
     }
 
 }
+

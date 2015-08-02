@@ -6,20 +6,19 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 /**
  * Created by Marcin on 2015-07-29.
  */
-public class EngineCoolantTemperature extends ObdCommand{
+public class AuxInputOutputObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public EngineCoolantTemperature() {
-        super("01 67");
+    public AuxInputOutputObdCommand() {
+        super("01 65");
     }
 
     @Override
     protected void performCalculations() {
-        // ignore first two bytes [01 67] of the response
+        // ignore first two bytes [01 62] of the response
         float A = buffer.get(2);
         float B = buffer.get(3);
-        float C = buffer.get(4);
-        afr = ( (int)A << 8 ) + ( (int)B << 8 ) + ( (int)C << 8 );
+        afr = A * 256 + B;
     }
 
     @Override
@@ -38,6 +37,7 @@ public class EngineCoolantTemperature extends ObdCommand{
 
     @Override
     public String getName() {
-        return AvailableCommandNames.ENGINE_COOLANT_TEMPERATURE.getValue();
+        return AvailableCommandNames.AUX_IO.getValue();
     }
+
 }

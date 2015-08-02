@@ -1,16 +1,18 @@
 package com.github.pires.obd.commands.Marcin;
 
-import com.github.pires.obd.enums.AvailableCommandNames;
 import com.github.pires.obd.commands.ObdCommand;
+import com.github.pires.obd.enums.AvailableCommandNames;
 
 /**
  * Created by Marcin on 2015-07-29.
  */
-public class IntakeAirTemperatureSensor extends ObdCommand {
+
+public class EngineReferenceTorqueObdCommand extends ObdCommand {
+
     private float afr = 0;
 
-    public IntakeAirTemperatureSensor() {
-        super("01 68");
+    public EngineReferenceTorqueObdCommand() {
+        super("01 63");
     }
 
     @Override
@@ -18,17 +20,12 @@ public class IntakeAirTemperatureSensor extends ObdCommand {
         // ignore first two bytes [01 63] of the response
         float A = buffer.get(2);
         float B = buffer.get(3);
-        float C = buffer.get(4);
-        float D = buffer.get(5);
-        float E = buffer.get(6);
-        float F = buffer.get(7);
-        float G = buffer.get(8);
-        afr = A + B + C + D + E + F + G;
+        afr = (A * 125) + B;
     }
 
     @Override
     public String getFormattedResult() {
-        return String.format("%.2f", getAfr());
+        return String.format("%.3f", getAfr() + "Nm");
     }
 
     @Override
@@ -42,7 +39,8 @@ public class IntakeAirTemperatureSensor extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.INTAKE_AIR_TEMP_SENSOR.getValue();
+        return AvailableCommandNames.ENGINE_REFERENCE_TORQUE.getValue();
     }
 
 }
+

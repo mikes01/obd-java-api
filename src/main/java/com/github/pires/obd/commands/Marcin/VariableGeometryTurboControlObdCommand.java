@@ -6,11 +6,11 @@ import com.github.pires.obd.commands.ObdCommand;
 /**
  * Created by Marcin on 01.08.2015.
  */
-public class TurbochargerTemperature2 extends ObdCommand {
+public class VariableGeometryTurboControlObdCommand extends ObdCommand {
     private float afr = 0;
 
-    public TurbochargerTemperature2() {
-        super("01 76");
+    public VariableGeometryTurboControlObdCommand() {
+        super("01 71");
     }
 
     @Override
@@ -21,9 +21,8 @@ public class TurbochargerTemperature2 extends ObdCommand {
         float C = buffer.get(4);
         float D = buffer.get(5);
         float E = buffer.get(6);
-        float F = buffer.get(7);
-        float G = buffer.get(8);
-        afr = A + B + C + D + E + F + G;
+
+        afr = A + B + C + D + E;
     }
 
     @Override
@@ -42,7 +41,7 @@ public class TurbochargerTemperature2 extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.TURBOCHARGER_TEMP2.getValue();
+        return AvailableCommandNames.VARIABLE_GEOMETRY_TURBO.getValue();
     }
 
 }
