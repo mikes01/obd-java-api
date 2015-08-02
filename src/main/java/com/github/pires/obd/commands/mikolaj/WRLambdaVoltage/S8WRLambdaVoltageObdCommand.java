@@ -8,7 +8,7 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 public class S8WRLambdaVoltageObdCommand extends WRLambdaVoltageObdCommand {
 
     public S8WRLambdaVoltageObdCommand() {
-        super("01 3B");
+        super("01 2B");
     }
 
     /**
