@@ -180,7 +180,19 @@ public enum AvailableCommandNames {
     MONITOR_STATUS("Monitor current drive cycle status (bits explained at wiki)"),
     EMISSION_REQUIREMENTS("Emission Requirements (Encoded)"),
     MAX_AIR_FLOW("Maximum value for air flow rate from mass air flow sensor"),
-    MAX_VALUE_SENSORS("Maximum value for equivalence ratio, oxygen sensor voltage, oxygen sensor current, and intake manifold absolute pressure");
+    MAX_VALUE_SENSORS("Maximum value for equivalence ratio, oxygen sensor voltage, oxygen sensor current, and intake manifold absolute pressure"),
+    NOx_NTE_CONTROL_AREA_STATUS("NOx NTE control area status"),
+    PM_NTE_CONTROL_AREA_STATUS("PM NTE control area status"),
+    ENGINE_RUN_TIME("Engine run time"),
+    PIDS_8("Available PIDs 8"),
+    ENGINE_RUN_TIME_AUX_EMISSION_CONTROL_DEVICE1("Engine run time for Auxiliary Emissions Control Device(AECD) 1"),
+    ENGINE_RUN_TIME_AUX_EMISSION_CONTROL_DEVICE2("Engine run time for Auxiliary Emissions Control Device(AECD) 2"),
+    NOX_SENSOR("NOx sensor"),
+    MANIFOLD_SURFACE_TEMP("Manifold surface temperature"),
+    NOX_REAGENT_SYSTEM("NOx reagent system"),
+    PM_SENSOR("Particulate matter (PM) sensor"),
+    INTAKE_MANIFOLD_ABS_PRESSURE("Intake manifold absolute pressure");
+
 
     private final String value;
 
