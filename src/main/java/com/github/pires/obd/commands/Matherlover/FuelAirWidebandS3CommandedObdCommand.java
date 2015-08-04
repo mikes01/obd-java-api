@@ -30,12 +30,12 @@ import com.github.pires.obd.enums.AvailableCommandNames;
 /**
  * Get AFR
  */
-public class FuelAirWidebandS7Commanded extends ObdCommand {
+public class FuelAirWidebandS3CommandedObdCommand extends ObdCommand {
 
     private float afr = 0;
 
-    public FuelAirWidebandS7Commanded() {
-        super("01 3A");
+    public FuelAirWidebandS3CommandedObdCommand() {
+        super("01 36");
     }
 
     @Override
@@ -62,7 +62,7 @@ public class FuelAirWidebandS7Commanded extends ObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.FUEL_AIR_WIDE_COMMANDED_S7.getValue();
+        return AvailableCommandNames.FUEL_AIR_WIDE_COMMANDED_S3.getValue();
     }
 
 }
