@@ -28,7 +28,7 @@ public class AvailablePids4ObdCommand extends PersistentObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.PIDS_3.getValue();
+        return AvailableCommandNames.PIDS_4.getValue();
     }
 
     @Override

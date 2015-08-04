@@ -53,7 +53,7 @@ public class FuelInjectionTimingObdCommand extends PercentageObdCommand {
 
     @Override
     public String getName() {
-        return AvailableCommandNames.TIMING_ADVANCE.getValue();
+        return AvailableCommandNames.FUEL_INJECTION_TIMING.getValue();
     }
 
 }
